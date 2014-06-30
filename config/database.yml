@@ -1,0 +1,64 @@
+development:
+  adapter: mysql2
+  host: 127.0.0.1
+  encoding: utf8
+  reconnect: false
+  database: mbk_station_development
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+percept_development:
+  adapter: mysql2
+  host: 127.0.0.1
+  encoding: utf8
+  reconnect: false
+  database: percepttools
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: mbk_station_test
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+percept_test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: percepttools_test
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql2
+  host: 127.0.0.1
+  encoding: utf8
+  reconnect: false
+  database: mbk_station_production
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+percept_production:
+  adapter: mysql2
+  host: 192.168.1.4
+  encoding: utf8
+  reconnect: false
+  database: percepttools
+  pool: 5
+  username: root
+  password: Mbk!myql
+  socket: /tmp/mysql.sock
