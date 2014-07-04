@@ -3,7 +3,6 @@ mbkStation.controller('DashboardController', ['$scope','$http', function($scope,
   $http({method: 'GET', url: 'http://localhost:3000/home.json'}).
     success(function(data, status, headers, config) {
       $scope.teste = data;
-      console.log(data);
     }).
     error(function(data, status, headers, config) {
       // called asynchronously if an error occurs

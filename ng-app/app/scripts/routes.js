@@ -37,7 +37,18 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
               controller: 'DashboardController'
             }
           }
+        },
+
+        'main.dashboard.advogados': {
+          url: '/painel/advogados',
+          views: {
+            'content@main':  {
+              templateUrl: '/views/advogados.html',
+              controller: 'AdvogadosController'
+            }
+          }
         }
+
     };
 
     angular.forEach(states, function(stateConfig, stateName) {

@@ -1,0 +1,41 @@
+<!-- ##########################################
+### TOP MENU
+############################################### -->
+<nav id="top-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/painel">MBK STATION</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="/painel"><i class="glyphicon glyphicon-th"></i> Dashboard</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Advogados</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i> Tela Cheia</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- ##########################################
+### DASHBOARD FILTERS
+############################################### -->
+<div id="dashboard-filters" class="well container">
+  <form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-1 control-label">DE:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control col-sm-4" date-field>
+        </div>
+        <label class="col-sm-1 control-label">ATÉ:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control col-sm-4" date-field>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default btn-block"><i class="glyphicon glyphicon-filter"></i> Filtrar</button>
+  </form>
+</div>
+<!-- ##########################################
+### TOGGLE FOR FULLSCREEN WHEN SCREEN IS ALREADY IN FULL MODE
+############################################### -->
+<div id="screen-toggle" class="pull-right pull-top" style="display:none">
+  <a class="btn btn-default" href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i></a></li>
+</div>
