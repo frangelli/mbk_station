@@ -1,8 +1,5 @@
 MbkStation::Application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
   # get '/', to: redirect('/')
   match 'home' => 'home#index'
 
