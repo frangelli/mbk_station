@@ -1,7 +1,12 @@
 MbkStation::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   # get '/', to: redirect('/')
   match 'home' => 'home#index'
+
+  match 'situacao_prazo_por_funcionario/grafico' => 'situacao_prazo_por_funcionario#grafico'
 
   # Sample of regular route:
   # Keep in mind you can assign values other than :controller and :action

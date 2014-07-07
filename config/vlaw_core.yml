@@ -1,0 +1,18 @@
+defaults: &defaults
+  #id da sua aplicacao
+  app_id: MbkStation
+  #chave da sua aplicacao
+  app_secret: 99ba7cf0b3bca225c08d89f1a4179bdd
+  #url para acessar o core
+  core_url: "http://vlaw-core.dev/"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  #url para acessar o core
+  core_url: "http://apps.mbk.intranet/vlaw_core/"
