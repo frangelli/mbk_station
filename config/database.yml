@@ -43,14 +43,13 @@ percept_test:
 
 production:
   adapter: mysql2
-  host: 127.0.0.1
-  encoding: utf8
-  reconnect: false
-  database: mbk_station_production
+  host: 192.168.1.4
+  port: 3306
+  database: mbk_station
+  username: srv2
+  password: Mbk!srv2
   pool: 5
-  username: root
-  password: root
-  socket: /tmp/mysql.sock
+  timeout: 5000
 
 percept_production:
   adapter: mysql2
@@ -59,6 +58,6 @@ percept_production:
   reconnect: false
   database: percepttools
   pool: 5
-  username: root
-  password: Mbk!myql
+  username: srv2
+  password: Mbk!srv2
   socket: /tmp/mysql.sock

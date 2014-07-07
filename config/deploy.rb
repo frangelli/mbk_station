@@ -1,5 +1,5 @@
 set :application, 'mbk_station'
-set :repo_url, 'ssh://git@bitbucket.org/yepdev/mbk_station.git'
+set :repo_url, 'ssh://git@bitbucket.org/mbkdvogados/mbk_station.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
