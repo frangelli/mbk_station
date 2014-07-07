@@ -1,6 +1,6 @@
 #encoding: utf-8
 class SituacaoPrazoPorFuncionario < ActiveRecord::Base
-  attr_accessible :funcionario, :pendente, :realizado, :reanotado, :dia, :created_at
+  attr_accessible :funcionario, :funcionario_id, :pendente, :realizado, :reanotado, :dia, :created_at
 
   belongs_to :funcionario
 
