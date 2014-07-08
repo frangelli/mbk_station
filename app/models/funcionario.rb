@@ -1,6 +1,8 @@
 class Funcionario < ActiveRecord::Base
   before_save :default_values
 
+  default_scope where(:ativo => true)
+
   attr_accessible :grupo, :nome, :nome_percept, :ativo
 
   validates_uniqueness_of :nome
