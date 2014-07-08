@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(:version => 20140707193641) do
     t.integer  "funcionario_id"
   end
 
+  add_index "situacao_prazo_por_funcionarios", ["funcionario_id"], :name => "index_situacao_prazo_por_funcionarios_on_funcionario_id"
+
   create_table "unidades", :force => true do |t|
     t.string   "nome",       :limit => 100, :null => false
     t.string   "descricao"

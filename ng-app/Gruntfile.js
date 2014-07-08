@@ -279,7 +279,9 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'bower_components/bootstrap/dist/fonts/*.*',
+            'bower_components/jquery-ui/themes/pepper-grinder/images/*.*'
           ]
         }, {
           expand: true,
