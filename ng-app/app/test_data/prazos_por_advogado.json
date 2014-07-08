@@ -1,16 +1,16 @@
 {
-  series: ['Realizados', 'Pendentes', 'Reanotados'],
-  data: [{
-    x: "Fernando",
-    y: [50, 80, 20]
+  "series": ["Realizados", "Pendentes", "Reanotados"],
+  "data": [{
+    "x": "Fernando",
+    "y": [50, 80, 20]
   }, {
-    x: "Liziane",
-    y: [60, 40, 10]
+    "x": "Liziane",
+    "y": [60, 40, 10]
   }, {
-    x: "Caren",
-    y: [40, 30,20]
+    "x": "Caren",
+    "y": [40, 30,20]
   }, {
-    x: "Cibele",
-    y: [30, 50, 3]
+    "x": "Cibele",
+    "y": [30, 50, 3]
   }]
-};
+}
