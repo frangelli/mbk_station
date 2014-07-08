@@ -1,5 +1,7 @@
 #encoding: utf-8
 class SituacaoPrazoPorFuncionario < ActiveRecord::Base
+
+
   attr_accessible :funcionario, :funcionario_id, :pendente, :realizado, :reanotado, :dia, :created_at
 
   belongs_to :funcionario
@@ -37,7 +39,7 @@ class SituacaoPrazoPorFuncionario < ActiveRecord::Base
 	  end_date = end_date.end_of_day
 
   	select("funcionario_id, SUM(pendente) as pendente, SUM(realizado) as realizado, SUM(reanotado) as reanotado")
-  	.where("funcionario_id IN (?) and dia BETWEEN ? AND ?",Funcionario.where(grupo:grupo).pluck(:id),start_date,end_date)
+  	.where("funcionario_id IN (?) AND dia BETWEEN ? AND ?",Funcionario.where(grupo:grupo).pluck(:id),start_date,end_date)
   	.group("funcionario_id")
   end
 
