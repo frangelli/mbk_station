@@ -5,8 +5,10 @@ mbkStation.directive('dateField',[function() {
 		},
 		link: function(scope, element, attrs) {
 			element.datepicker({
-				dateFormat: 'dd/mm/yy'
+				dateFormat: 'dd/mm/yy',
+        defaultDate: new Date()
 			});
+
 		}
 	}
 }]);

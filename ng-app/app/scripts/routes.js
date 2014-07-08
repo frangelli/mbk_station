@@ -39,12 +39,12 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           }
         },
 
-        'main.dashboard.advogados': {
-          url: '/painel/advogados',
+        'main.advogados': {
+          url: '/advogados',
           views: {
             'content@main':  {
-              templateUrl: '/views/advogados.html',
-              controller: 'AdvogadosController'
+              templateUrl: '/views/prazos_por_advogado.html'
+              // controller: 'PrazosPorAdvogadoController'
             }
           }
         }

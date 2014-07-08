@@ -7,8 +7,8 @@
       <a class="navbar-brand" href="/painel">MBK STATION</a>
     </div>
     <ul class="nav navbar-nav">
-        <li class="active"><a href="/painel"><i class="glyphicon glyphicon-th"></i> Dashboard</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Advogados</a></li>
+        <li ng-class="{active: $state.includes('main.dashboard')}"><a ui-sref="main.dashboard"><i class="glyphicon glyphicon-th"></i> Dashboard</a></li>
+        <li ng-class="{active: $state.includes('main.advogados')}"><a ui-sref="main.advogados"><i class="glyphicon glyphicon-briefcase"></i> Advogados</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i> Tela Cheia</a></li>
@@ -18,16 +18,16 @@
 <!-- ##########################################
 ### DASHBOARD FILTERS
 ############################################### -->
-<div id="dashboard-filters" class="well container">
+<div id="dashboard-filters" class="well container" ng-controller="MainController">
   <form class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-1 control-label">DE:</label>
         <div class="col-sm-5">
-          <input type="text" class="form-control col-sm-4" date-field>
+          <input type="text" class="form-control col-sm-4" date-field ng-model="start_date">
         </div>
         <label class="col-sm-1 control-label">ATÉ:</label>
         <div class="col-sm-5">
-          <input type="text" class="form-control col-sm-4" date-field>
+          <input type="text" class="form-control col-sm-4" date-field ng-model="end_date">
         </div>
     </div>
     <button type="submit" class="btn btn-default btn-block"><i class="glyphicon glyphicon-filter"></i> Filtrar</button>

@@ -1,3 +1,4 @@
-mbkStation.controller('MainController', ['$scope', function($scope){
-
+mbkStation.controller('MainController', ['$rootScope', '$scope','$state', function($rootScope, $scope,$state){
+  $scope = $rootScope;
+  $scope.$state = $state;
 }]);
