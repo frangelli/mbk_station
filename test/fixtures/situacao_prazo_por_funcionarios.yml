@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  funcionario: 
+  pendente: 
+  realizado: MyString
+  int,: MyString
+  reanotado: MyString
+  int: MyString
+
+two:
+  funcionario: 
+  pendente: 
+  realizado: MyString
+  int,: MyString
+  reanotado: MyString
+  int: MyString
