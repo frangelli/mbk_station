@@ -4,6 +4,7 @@ mbkStation.directive('toggle',[function() {
     scope: {
     },
     link: function(scope, element, attrs) {
+
       element.on('click', function(event){
         event.preventDefault();
         var targets = attrs.targets.split(",");

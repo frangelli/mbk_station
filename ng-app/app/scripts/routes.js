@@ -44,7 +44,15 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           views: {
             'content@main':  {
               templateUrl: '/views/prazos_por_advogado.html'
-              // controller: 'PrazosPorAdvogadoController'
+            }
+          }
+        },
+
+        'main.administrativos': {
+          url: '/administrativos',
+          views: {
+            'content@main':  {
+              templateUrl: '/views/prazos_administrativos.html'
             }
           }
         }

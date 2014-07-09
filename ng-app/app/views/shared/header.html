@@ -9,6 +9,7 @@
     <ul class="nav navbar-nav">
         <li ng-class="{active: $state.includes('main.dashboard')}"><a ui-sref="main.dashboard"><i class="glyphicon glyphicon-th"></i> Dashboard</a></li>
         <li ng-class="{active: $state.includes('main.advogados')}"><a ui-sref="main.advogados"><i class="glyphicon glyphicon-briefcase"></i> Advogados</a></li>
+        <li ng-class="{active: $state.includes('main.administrativos')}"><a ui-sref="main.administrativos"><i class="glyphicon glyphicon-th-list"></i> Administrativos</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i> Tela Cheia</a></li>
@@ -36,6 +37,10 @@
 <!-- ##########################################
 ### TOGGLE FOR FULLSCREEN WHEN SCREEN IS ALREADY IN FULL MODE
 ############################################### -->
-<div id="screen-toggle" class="pull-right pull-top" style="display:none">
-  <a class="btn btn-default" href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i></a></li>
+<div class="container-fluid">
+  <div class="row">
+  <div id="screen-toggle" class="pull-right" style="display:none">
+  <a class="btn btn-link" href="#" data-targets="#dashboard-filters,#top-menu,#screen-toggle" toggle><i class="glyphicon glyphicon-fullscreen"></i></a></li>
+  </div>
+</div>
 </div>

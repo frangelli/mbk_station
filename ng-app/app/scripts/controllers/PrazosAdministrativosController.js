@@ -1,9 +1,9 @@
-mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','ChartsService', function($rootScope,$scope,ChartsService){
+mbkStation.controller('PrazosAdministrativosController', ['$rootScope','$scope','ChartsService', function($rootScope,$scope,ChartsService){
   //--------------------------------------------------------------
   // CHART CONFIG
   //--------------------------------------------------------------
   var config = {
-    title: 'Prazos por Advogado',
+    title: 'Prazos Administrativos',
     tooltips: true,
     labels: true,
     legend: {
@@ -12,28 +12,27 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
       position: 'right'
     },
     innerRadius: 0, // applicable on pieCharts, can be a percentage like '50%'
-    lineLegend: 'traditional' // can be also 'traditional'
+    lineLegend: 'lineEnd' // can be also 'traditional'
   };
 
   //--------------------------------------------------------------
   // $SCOPE VARIABLES
   //--------------------------------------------------------------
-  $scope.prazos_por_advogado_chart_config = config;
+  $scope.prazos_administrativos_chart_config = config;
   $scope.chart_type = 'bar';
-  // $scope.prazos_por_advogado_data = {};
 
-  loadRemoteDataAdvogados(null,{"start_date":$scope.start_date,"end_date":$scope.end_date,"grupo":"Advogados"});
+  loadRemoteDataAdministrativos(null,{"start_date":$scope.start_date,"end_date":$scope.end_date,"grupo":"Administrativo"});
   //--------------------------------------------------------------
   // $SCOPE FUNCTIONS
   //--------------------------------------------------------------
   $scope.changeChartType = changeChartType = function(chartType) {
 
-    $scope.prazos_por_advogado_data = {};
+    $scope.prazos_administrativos = {};
 
     if(chartType == 'bar'){
-      $scope.prazos_por_advogado_data = $scope.dataForBar;
+      $scope.prazos_administrativos = $scope.dataForBar;
     } else {
-      $scope.prazos_por_advogado_data = $scope.dataForPie;
+      $scope.prazos_administrativos = $scope.dataForPie;
     }
     $scope.chart_type = chartType;
   };
@@ -41,12 +40,12 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
   //--------------------------------------------------------------
   // EVENT LISTENERS
   //--------------------------------------------------------------
-  $scope.$on('dateChanged',loadRemoteDataAdvogados);
+  $scope.$on('dateChanged',loadRemoteDataAdministrativos);
 
   //--------------------------------------------------------------
   // PRIVATE METHODS
   //--------------------------------------------------------------
-  function applyRemoteDataAdvogados(newData){
+  function applyRemoteDataAdministrativos(newData){
     $scope.dataForBar = newData;
 
     var dataForPie = JSON.parse(JSON.stringify(newData));
@@ -60,14 +59,14 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
     });
     $scope.dataForPie = JSON.parse(JSON.stringify(dataForPie));
 
-    $scope.prazos_por_advogado_data = ($scope.chart_type == 'bar') ? $scope.dataForBar : $scope.dataForPie;
+    $scope.prazos_administrativos = ($scope.chart_type == 'bar') ? $scope.dataForBar : $scope.dataForPie;
   };
 
-  function loadRemoteDataAdvogados(evt,params) {
-    console.log("EVENT LISTENER ADVOGADOS");
-    params.grupo = "Advogados";
-    ChartsService.getPrazosPorAdvogado(params).then(function(data){
-      applyRemoteDataAdvogados(data);
+  function loadRemoteDataAdministrativos(evt,params) {
+    console.log("EVENT LISTENER ADM");
+    params.grupo = "Administrativo";
+    ChartsService.getPrazosAdministrativos(params).then(function(data){
+      applyRemoteDataAdministrativos(data);
     });
   };
 }]);

@@ -9,6 +9,8 @@ var mbkStation = angular.module('mbkStation', [
     'angularCharts'
   ]);
 
+mbkStation.constant('DEV_MODE', true);
+
 //--------------------------------------------------------------
 // PARA AS ROTAS VER O ARQUIVO routes.js
 //--------------------------------------------------------------
