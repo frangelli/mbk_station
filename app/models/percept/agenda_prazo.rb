@@ -55,6 +55,7 @@ class Percept::AgendaPrazo < Percept::Base
 	 		if [1,2,7].include? count.situacao
 	 			retVal[count.responsavel]["realizado"] = 0 unless retVal[count.responsavel]["realizado"]
 	 			retVal[count.responsavel]["realizado"] = retVal[count.responsavel]["realizado"] + count.count
+
 	 		else
 	 			retVal[count.responsavel]["pendente"] = count.count
 	 		end

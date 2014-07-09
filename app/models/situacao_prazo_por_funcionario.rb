@@ -21,8 +21,6 @@ class SituacaoPrazoPorFuncionario < ActiveRecord::Base
         next
       end
 
-
-
   		item = where("funcionario_id = ? AND dia = ?",funcionario.id,dia).first
 
   		if item
