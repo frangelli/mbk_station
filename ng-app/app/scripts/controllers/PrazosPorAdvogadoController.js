@@ -23,7 +23,7 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
   $scope.chart_type = 'bar';
   // $scope.prazos_por_advogado_data = {};
 
-  loadRemoteData();
+  loadRemoteData(null,{"start_date":$scope.start_date,"end_date":$scope.end_date,"grupo":"Advogados"});
   //--------------------------------------------------------------
   // $SCOPE FUNCTIONS
   //--------------------------------------------------------------
@@ -38,6 +38,12 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
     }
     $scope.chart_type = chartType;
   };
+
+  //--------------------------------------------------------------
+  // EVENT LISTENERS
+  //--------------------------------------------------------------
+  $scope.$on('dateChanged',loadRemoteData);
+
   //--------------------------------------------------------------
   // PRIVATE METHODS
   //--------------------------------------------------------------
@@ -58,8 +64,9 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
     $scope.prazos_por_advogado_data = ($scope.chart_type == 'bar') ? $scope.dataForBar : $scope.dataForPie;
   };
 
-  function loadRemoteData() {
-    ChartsService.getPrazosPorAdvogado({"start_date":$rootScope.start_date,"end_date":$rootScope.end_date}).then(function(data){
+  function loadRemoteData(evt,params) {
+    params.grupo = "Advogados";
+    ChartsService.getPrazosPorAdvogado(params).then(function(data){
       applyRemoteData(data);
     });
   };

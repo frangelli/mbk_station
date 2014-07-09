@@ -12,10 +12,12 @@ mbkStation.service('ChartsService', ['$http','$q', function($http,$q){
   //--------------------------------------------------------------
   // PUBLIC METHOS (returned by the service above)
   //--------------------------------------------------------------
-  function getPrazosPorAdvogado(){
+  //situacao_prazo_por_funcionario/grafico.json
+  function getPrazosPorAdvogado(params){
         var request = $http({
             method: "get",
-            url: "/test_data/prazos_por_advogado.json"
+            url: "/situacao_prazo_por_funcionario/grafico.json",
+            params: params
         });
 
         return( request.then( handleSuccess, handleError ) );
