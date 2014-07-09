@@ -53,7 +53,7 @@ class Percept::AgendaPrazo < Percept::Base
 	 	cumpridos_e_pendentes.each do |count|
 	 		retVal[count.responsavel] = {} unless retVal[count.responsavel]
 	 		if [1,2,7].include? count.situacao
-	 			retVal[count.responsavel]["cumprido"] = count.count
+	 			retVal[count.responsavel]["realizado"] = count.count
 	 		else
 	 			retVal[count.responsavel]["pendente"] = count.count
 	 		end
