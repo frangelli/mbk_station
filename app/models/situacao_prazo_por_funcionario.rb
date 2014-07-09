@@ -16,7 +16,12 @@ class SituacaoPrazoPorFuncionario < ActiveRecord::Base
   		data["reanotado"] = 0 if data["reanotado"].blank?
 
       funcionario = Funcionario.find_by_nome_percept(nome)
-      raise "Funcionário com nome_percept #{nome} não encontrado. Favor cadastrar" unless funcionario
+      unless funcionario
+        Rails.logger.error "Funcionário com nome_percept #{nome} não encontrado. Favor cadastrar"
+        next
+      end
+
+
 
   		item = where("funcionario_id = ? AND dia = ?",funcionario.id,dia).first
 
