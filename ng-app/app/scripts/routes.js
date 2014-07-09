@@ -19,13 +19,13 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
         //404
         '404': {
           url:'/404',
-          templateUrl: '/views/shared/404.html'
+          templateUrl: 'views/shared/404.html'
         },
 
         //principal
         'main': {
           abstract: true,
-          templateUrl: '/views/main.html',
+          templateUrl: 'views/main.html',
           controller: 'MainController'
         },
 
@@ -33,7 +33,7 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           url: '/painel',
           views: {
             'content@main':  {
-              templateUrl: '/views/dashboard.html',
+              templateUrl: 'views/dashboard.html',
               controller: 'DashboardController'
             }
           }
@@ -43,7 +43,7 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           url: '/advogados',
           views: {
             'content@main':  {
-              templateUrl: '/views/prazos_por_advogado.html'
+              templateUrl: 'views/prazos_por_advogado.html'
             }
           }
         },
@@ -52,7 +52,7 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           url: '/administrativos',
           views: {
             'content@main':  {
-              templateUrl: '/views/prazos_administrativos.html'
+              templateUrl: 'views/prazos_administrativos.html'
             }
           }
         }
