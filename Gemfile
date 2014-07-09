@@ -25,6 +25,8 @@ gem 'whenever', :require => false
 
 # Deploy with Capistrano
 gem 'capistrano', :group => :development
+gem 'capistrano-rvm', :group => :development
+gem 'capistrano-rails', :group => :development
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
