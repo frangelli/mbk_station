@@ -8,10 +8,10 @@ class SituacaoIntimacoesDiaController < ApplicationController
 
 		ret = {
 			data: [
-				{x: "Não Classificadas", y: data.nao_classificadas},
-				{x: "Classificadas", y: data.classificadas},
-				{x: "Lançadas", y: data.lancadas},
-				{x: "Lixeira", y: data.lixeira}
+				{x: "Não Classificadas", y: [data.nao_classificadas]},
+				{x: "Classificadas", y: [data.classificadas]},
+				{x: "Lançadas", y: [data.lancadas]},
+				{x: "Lixeira", y: [data.lixeira]}
 			]
 		}
 
