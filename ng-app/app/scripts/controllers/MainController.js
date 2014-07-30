@@ -21,7 +21,7 @@ mbkStation.controller('MainController', ['$rootScope', '$scope','$state','$inter
     $rootScope.$broadcast('dateChanged',{"start_date":$scope.start_date,"end_date":$scope.end_date});
   },900000);
 
-  $scope.available_states = ['main.dashboard','main.advogados','main.administrativos'];
+  $scope.available_states = ['main.dashboard','main.advogados','main.administrativos','main.intimacoes'];
   $scope.current = 0;
 
   $interval(function(){
