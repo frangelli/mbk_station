@@ -4,6 +4,7 @@ MbkStation::Application.routes.draw do
   match 'home' => 'home#index'
 
   match 'situacao_prazo_por_funcionario/grafico' => 'situacao_prazo_por_funcionario#grafico'
+  match 'situacao_intimacoes_dia/grafico' => 'situacao_intimacoes_dia#grafico'
 
   # Sample of regular route:
   # Keep in mind you can assign values other than :controller and :action
