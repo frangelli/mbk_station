@@ -8,13 +8,24 @@ class SituacaoIntimacoesDia < ActiveRecord::Base
     start_date = end_date = dia - 1.day
     data = Percept::Intimacao.situacao_no_periodo(start_date,end_date)
 
-    create(
+    item = where("dia = ?",dia).first
+
+    if item
+      item.nao_classificadas =  data["nao_classificadas"]
+      item.classificadas =  data["classificadas"]
+      item.lancadas =  data["lancadas"]
+      item.lixeira =  data["lixeira"]
+      item.save
+    else
+      create(
         dia: dia,
         nao_classificadas: data["nao_classificadas"],
         classificadas: data["classificadas"],
         lancadas: data["lancadas"],
         lixeira: data["lixeira"]
         )
+    end
+
 
   end
 
