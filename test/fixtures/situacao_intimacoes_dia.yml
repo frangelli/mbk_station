@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dia: 2014-07-29
+  nao_classificadas: 1
+  classificadas: 1
+  lanadas: 1
+  lixeira: 1
+
+two:
+  dia: 2014-07-29
+  nao_classificadas: 1
+  classificadas: 1
+  lanadas: 1
+  lixeira: 1
