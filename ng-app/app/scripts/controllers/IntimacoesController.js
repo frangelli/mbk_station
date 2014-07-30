@@ -20,7 +20,7 @@ mbkStation.controller('IntimacoesController', ['$rootScope','$scope','ChartsServ
   //--------------------------------------------------------------
   $scope.intimacoes_dia_chart_config = config;
   $scope.chart_type = 'pie';
-
+  $scope.intimacoes_dia_data = {};
   loadRemoteDataIntimacoes(null,{"start_date":$scope.start_date,"end_date":$scope.end_date});
   //--------------------------------------------------------------
   // $SCOPE FUNCTIONS

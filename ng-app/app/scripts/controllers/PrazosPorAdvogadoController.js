@@ -34,6 +34,7 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
       $scope.prazos_por_advogado_data = $scope.dataForBar;
     } else {
       $scope.prazos_por_advogado_data = $scope.dataForPie;
+      console.log(JSON.stringify($scope.dataForPie));
     }
     $scope.chart_type = chartType;
   };

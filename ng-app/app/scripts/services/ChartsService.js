@@ -6,8 +6,8 @@ mbkStation.service('ChartsService', ['$http','$q','DEV_MODE', function($http,$q,
   return {
 
     getPrazosPorAdvogado: getPrazosPorAdvogado,
-    getPrazosAdministrativos: getPrazosAdministrativos
-
+    getPrazosAdministrativos: getPrazosAdministrativos,
+    getIntimacoesByStatus: getIntimacoesByStatus
   };
 
   //--------------------------------------------------------------
@@ -17,7 +17,7 @@ mbkStation.service('ChartsService', ['$http','$q','DEV_MODE', function($http,$q,
   function getPrazosPorAdvogado(params){
         var request = $http({
             method: "get",
-            url: ((DEV_MODE) ? "http://localhost:3000/situacao_prazo_por_funcionario/grafico.json" : "/situacao_prazo_por_funcionario/grafico.json"),
+            url: ((DEV_MODE) ? "http://127.0.0.1:3000/situacao_prazo_por_funcionario/grafico.json" : "/situacao_prazo_por_funcionario/grafico.json"),
             params: params
         });
 
@@ -27,7 +27,7 @@ mbkStation.service('ChartsService', ['$http','$q','DEV_MODE', function($http,$q,
   function getPrazosAdministrativos(params){
         var request = $http({
             method: "get",
-            url: ((DEV_MODE) ? "http://localhost:3000/situacao_prazo_por_funcionario/grafico.json" : "/situacao_prazo_por_funcionario/grafico.json"),
+            url: ((DEV_MODE) ? "http://127.0.0.1:3000/situacao_prazo_por_funcionario/grafico.json" : "/situacao_prazo_por_funcionario/grafico.json"),
             params: params
         });
 
@@ -37,7 +37,7 @@ mbkStation.service('ChartsService', ['$http','$q','DEV_MODE', function($http,$q,
   function getIntimacoesByStatus(params){
         var request = $http({
             method: "get",
-            url: ((DEV_MODE) ? "http://localhost:3000/situacao_intimacoes_dia/grafico.json" : "/situacao_intimacoes_dia/grafico.json"),
+            url: ((DEV_MODE) ? "http://127.0.0.1:3000/situacao_intimacoes_dia/grafico.json" : "/situacao_intimacoes_dia/grafico.json"),
             params: params
         });
 
