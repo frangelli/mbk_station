@@ -1,6 +1,13 @@
+html,body {
+  height: 100%;
+}
 body {
   margin-top: 70px;
   padding: 5px;
+}
+
+#main-content {
+  height: 100%;
 }
 
 /************************************************
@@ -11,9 +18,13 @@ body {
 /************************************************
 * CHARTS
 *************************************************/
+.panel, .panel-body {
+  height: 95%;
+}
+
 .chart {
  min-height: 450px;
- height: 450px;
+ height: 95%;
 }
 
 .chart .x .tick text {
@@ -25,7 +36,7 @@ body {
 }
 
 .ac-chart svg{
-  height: 450px;
+  height: 95%;
 }
 
 .ac-chart .g text {
