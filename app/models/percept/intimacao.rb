@@ -20,7 +20,6 @@ class Percept::Intimacao < Percept::Base
         lancadas = 0
         lixeira = 0
         counts.each do |count|
-            puts count.inspect
             if count.revisado == 1 and count.status_cpj == 0 and count.status_1 == "NOSSO"
                 classificadas = classificadas + count.count
             elsif count.status_cpj == 1 || ( count.status_1 == "NOSSO" and count.revisado == 2 )
