@@ -34,6 +34,16 @@ mbkStation.service('ChartsService', ['$http','$q','DEV_MODE', function($http,$q,
         return( request.then( handleSuccess, handleError ) );
   };
 
+  function getIntimacoesByStatus(params){
+        var request = $http({
+            method: "get",
+            url: ((DEV_MODE) ? "http://localhost:3000/situacao_intimacoes_dia/grafico.json" : "/situacao_intimacoes_dia/grafico.json"),
+            params: params
+        });
+
+        return( request.then( handleSuccess, handleError ) );
+  };
+
   //--------------------------------------------------------------
   // PRIVATE METHODS
   //--------------------------------------------------------------

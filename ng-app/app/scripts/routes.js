@@ -55,6 +55,15 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
               templateUrl: 'views/prazos_administrativos.html'
             }
           }
+        },
+
+        'main.intimacoes': {
+          url: '/intimacoes',
+          views: {
+            'content@main':  {
+              templateUrl: 'views/intimacoes_dia.html'
+            }
+          }
         }
 
     };
