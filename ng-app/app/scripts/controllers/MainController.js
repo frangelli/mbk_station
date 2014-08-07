@@ -34,6 +34,6 @@ mbkStation.controller('MainController', ['$rootScope', '$scope','$state','$inter
     }
       console.log($scope.available_states[$scope.current]);
       $state.go($scope.available_states[$scope.current]);
-  },300000);
+  },60000);
 
 }]);
