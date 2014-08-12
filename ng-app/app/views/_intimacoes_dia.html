@@ -1,4 +1,7 @@
-<div class="panel panel-default" ng-controller="IntimacoesController">
+<div class="panel panel-warning" ng-controller="IntimacoesController">
+  <div class="panel-heading">
+    <h3 class="panel-title">Intimações<span class="pull-right label label-default">{{start_date}} até {{end_date}}</span></h3>
+  </div>
   <div class="panel-body">
       <div ac-chart="chart_type" ac-data="intimacoes_dia_data" ac-config="intimacoes_dia_chart_config" id='chart-intimacoes' class='chart'></div>
   </div>

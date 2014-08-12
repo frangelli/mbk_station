@@ -4,6 +4,7 @@ html,body {
 body {
   margin-top: 70px;
   padding: 5px;
+  background: url(../images/tweed.png) repeat;
 }
 
 #main-content {
@@ -18,13 +19,14 @@ body {
 /************************************************
 * CHARTS
 *************************************************/
-.panel, .panel-body {
-  height: 95%;
+
+.panel-body {
+  background: url(../images/logo-mbk.gif) top center no-repeat, linear-gradient( to bottom, white, white, #dedede);
 }
 
 .chart {
- min-height: 450px;
- height: 95%;
+  margin-top: 50px;
+  min-height: 600px;
 }
 
 .chart .x .tick text {
@@ -35,8 +37,12 @@ body {
   text-anchor: start !important;
 }
 
+.ac-chart{
+  height: 100%;
+}
+
 .ac-chart svg{
-  height: 95%;
+  height: 100%;
 }
 
 .ac-chart .g text {
