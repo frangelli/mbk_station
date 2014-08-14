@@ -11,7 +11,7 @@ mbkStation.config(['$stateProvider','$urlRouterProvider',function ($stateProvide
           url: '',
           controller: ['$location',
               function($location){
-                $location.path('/painel');
+                $location.path('/advogados');
               }
           ]
         },

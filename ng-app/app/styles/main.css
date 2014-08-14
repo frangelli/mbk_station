@@ -1,6 +1,14 @@
+html,body {
+  height: 100%;
+}
 body {
   margin-top: 70px;
   padding: 5px;
+  background: url(../images/tweed.png) repeat;
+}
+
+#main-content {
+  height: 100%;
 }
 
 /************************************************
@@ -11,9 +19,14 @@ body {
 /************************************************
 * CHARTS
 *************************************************/
+
+.panel-body {
+  background: url(../images/logo-mbk.gif) top center no-repeat, linear-gradient( to bottom, white, white, #dedede);
+}
+
 .chart {
- min-height: 450px;
- height: 450px;
+  margin-top: 20px;
+  min-height: 450px;
 }
 
 .chart .x .tick text {
@@ -24,8 +37,12 @@ body {
   text-anchor: start !important;
 }
 
+.ac-chart{
+  height: 100%;
+}
+
 .ac-chart svg{
-  height: 450px;
+  height: 100%;
 }
 
 .ac-chart .g text {
