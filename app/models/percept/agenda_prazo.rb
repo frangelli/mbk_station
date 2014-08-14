@@ -39,7 +39,8 @@ class Percept::AgendaPrazo < Percept::Base
 
 	 	#Na regra deste relatório vamos seguir a seguinte logica:
 	 	# todos prazos no período sem dt_anterior no período
-	 	# CUMPRIDO = situacao 1,2 ou 7
+	 	# CUMPRIDO = situacao 1 ou 7
+	 	# NAO COUBE = 2
 	 	# PENDENTE = situacao 0
 	 	cumpridos_e_pendentes = select("responsavel, situacao, count(*) as count")
 	 	.where(" data_agenda BETWEEN ? AND ?
@@ -52,10 +53,11 @@ class Percept::AgendaPrazo < Percept::Base
 	 	retVal = {}
 	 	cumpridos_e_pendentes.each do |count|
 	 		retVal[count.responsavel] = {} unless retVal[count.responsavel]
-	 		if [1,2,7].include? count.situacao
+	 		if [1,7].include? count.situacao
 	 			retVal[count.responsavel]["realizado"] = 0 unless retVal[count.responsavel]["realizado"]
 	 			retVal[count.responsavel]["realizado"] = retVal[count.responsavel]["realizado"] + count.count
-
+	 		elsif count.situacao == 2
+	 			retVal[count.responsavel]["nao_coube"] = count.count
 	 		else
 	 			retVal[count.responsavel]["pendente"] = count.count
 	 		end
