@@ -21,7 +21,7 @@ body {
 *************************************************/
 
 .panel-body {
-  background: url(../images/logo-mbk.gif) top center no-repeat, linear-gradient( to bottom, white, white, #dedede);
+  background: url(../images/logo_nova_pequena_transparente.png) top center no-repeat, radial-gradient(circle at top center, white, #cdcdcd);
 }
 
 .chart {
