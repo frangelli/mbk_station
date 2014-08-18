@@ -4,8 +4,22 @@ class SituacaoIntimacoesDia < ActiveRecord::Base
   def self.import_data_from_percept(dia = nil)
     dia = Date.today unless dia
 
-    # vou buscar no percept sempre o dia anterior, onde a data de publicação foi ontem, o trabalho será feito hoje.
-    start_date = end_date = dia - 1.day
+
+
+    # POG Monster plus, porque só trabalhamos com dada te publicação
+    if dia.wday == 1 #segunda
+      # na segunda-feira, precisamos capturar os dados da sexta anterior, afinal
+      # nenhuma intimação é publicada nem sábado, nem domingo
+      start_date = end_date = dia - 3.day
+    elsif [0,7].include? dia.wday #sábado ou domingo
+      # não importa nada, pois o setor de intimações não trabalha sábado ou domingo
+      return
+    else
+      # vou buscar no percept sempre o dia anterior,
+      # onde a data de publicação foi ontem, o trabalho será feito hoje.
+      start_date = end_date = dia - 1.day
+    end
+
     data = Percept::Intimacao.situacao_no_periodo(start_date,end_date)
 
     item = where("dia = ?",dia).first
