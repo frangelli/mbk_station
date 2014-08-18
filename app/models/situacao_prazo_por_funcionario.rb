@@ -11,6 +11,11 @@ class SituacaoPrazoPorFuncionario < ActiveRecord::Base
   scope :legais, -> {where(legal: 1)}
   scope :administrativos, -> {where(legal: 0)}
 
+  def self.limpar_dia dia
+    delete_all(dia: dia)
+  end
+
+
   def self.find_or_create funcionario_nome_percept, legal, dia
     funcionario = Funcionario.find_by_nome_percept(funcionario_nome_percept)
     unless funcionario

@@ -37,6 +37,7 @@ class Percept::Intimacao < Percept::Base
         retVal["lancadas"] = lancadas
         retVal["lixeira"] = lixeira
 
+        puts retVal.inspect
         retVal
     end
 end

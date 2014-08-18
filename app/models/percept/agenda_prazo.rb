@@ -37,6 +37,8 @@ class Percept::AgendaPrazo < Percept::Base
       # 7 = Realizados (Azul) (Quando a peça é elaborada, mas nao eh cumprido ainda)
 
 
+    SituacaoPrazoPorFuncionario.limpar_dia dia
+
 
     #Na regra deste relatório vamos seguir a seguinte logica:
     # todos prazos no período sem dt_anterior no período
