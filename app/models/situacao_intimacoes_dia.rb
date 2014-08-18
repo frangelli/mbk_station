@@ -11,9 +11,9 @@ class SituacaoIntimacoesDia < ActiveRecord::Base
     item = where("dia = ?",dia).first
 
     if item
-      item.nao_classificadas =  data["nao_classificadas"]
-      item.classificadas =  data["classificadas"]
-      item.lancadas =  data["lancadas"]
+      item.nao_classificadas =  data["nao_classificadas"],
+      item.classificadas =  data["classificadas"],
+      item.lancadas =  data["lancadas"],
       item.lixeira =  data["lixeira"]
       item.save
     else
@@ -25,8 +25,6 @@ class SituacaoIntimacoesDia < ActiveRecord::Base
         lixeira: data["lixeira"]
         )
     end
-
-
   end
 
   def self.dados_por_periodo(start_date,end_date)
