@@ -3,7 +3,6 @@ mbkStation.controller('PrazosAdministrativosController', ['$rootScope','$scope',
   // CHART CONFIG
   //--------------------------------------------------------------
   var config = {
-    title: 'Prazos Administrativos',
     tooltips: true,
     labels: true,
     legend: {

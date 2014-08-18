@@ -3,7 +3,6 @@ mbkStation.controller('IntimacoesController', ['$rootScope','$scope','ChartsServ
   // CHART CONFIG
   //--------------------------------------------------------------
   var config = {
-    title: 'Setor de Intimações',
     tooltips: true,
     labels: true,
     legend: {

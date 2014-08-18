@@ -3,7 +3,6 @@ mbkStation.controller('PrazosPorAdvogadoController', ['$rootScope','$scope','Cha
   // CHART CONFIG
   //--------------------------------------------------------------
   var config = {
-    title: 'Prazos por Advogado',
     tooltips: true,
     labels: true,
     legend: {

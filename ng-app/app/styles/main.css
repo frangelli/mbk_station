@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'Resamitz';
+  src: url(../fonts/Resamitz_0047.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Resamitz';
+  src: url(../fonts/ResamitzBold_0047.otf);
+  font-style: normal;
+  font-weight: bold;
+}
+
 html,body {
   height: 100%;
+  font-family: 'Resamitz', Helvetica, sans-serif;
+  font-size: 16px;
 }
 body {
   margin-top: 70px;
@@ -19,13 +35,15 @@ body {
 /************************************************
 * CHARTS
 *************************************************/
-
+.panel-title {
+  font-family: 'Resamitz', Helvetica, sans-serif;
+}
 .panel-body {
-  background: url(../images/logo-mbk.gif) top center no-repeat, linear-gradient( to bottom, white, white, #dedede);
+  background: url(../images/logo_nova_pequena_transparente.png) top center no-repeat, radial-gradient(circle at top center, white, #cdcdcd);
 }
 
 .chart {
-  margin-top: 20px;
+  margin-top: 120px;
   min-height: 450px;
 }
 
